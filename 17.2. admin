@@ -1,0 +1,55 @@
+correct_username = "admin123"
+correct_role = "admin"
+
+while True:
+    username = input("Enter username: ")
+    role = input("Enter role admin/user): ")
+
+    if username == correct_username and role == correct_role:
+        print("\nLogin Successful!")
+        break
+    elif role == "user" and username == "user123":
+        print("\nLogin Successful!")
+        break
+    else:
+        print("Invalid credentials. Try again.\n")
+
+if role == "admin":
+    print("\n--- Admin Menu ---")
+    
+    while True:
+        print("\n1. View Users")
+        print("2. Delete User")
+        print("3. Logout")
+        
+        choice = input("Enter choice: ")
+        
+        if choice == "1":
+            print("Displaying all users...")
+        elif choice == "2":
+            print("User deleted successfully.")
+        elif choice == "3":
+            print("Logging out...")
+            break
+        else:
+            print("Invalid choice. Try again.")
+
+elif role == "user":
+    print("\n--- User Menu ---")
+    
+    while True:
+        print("\n1. View Profile")
+        print("2. Edit Profile")
+        print("3. Logout")
+        
+        choice = input("Enter choice: ")
+        
+        if choice == "1":
+            print("Displaying profile...")
+        elif choice == "2":
+            print("Profile updated.")
+        elif choice == "3":
+            print("Logging out...")
+            break
+        else:
+            print("Invalid choice. Try again.")
